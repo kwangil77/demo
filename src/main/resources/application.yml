@@ -20,3 +20,9 @@ server:
 spring:
   application:
     name: demo
+
+aws:
+  iam:
+    user:
+      accessKey:
+        elapsedHours: 15000

@@ -1,0 +1,5 @@
+aws:
+  iam:
+    user:
+      accessKey:
+        elapsedHours: 1
