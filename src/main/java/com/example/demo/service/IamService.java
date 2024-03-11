@@ -55,7 +55,7 @@ public class IamService {
 
             users.addAll(response.users());
 
-            if (!response.isTruncated()) {
+            if (Boolean.FALSE.equals(response.isTruncated())) {
                 done = true;
             } else {
                 newMarker = response.marker();
@@ -82,7 +82,7 @@ public class IamService {
                     .filter(metadata -> Duration.between(metadata.createDate(), clock.instant()).toHours() > elapsedHours)
                     .toList());
 
-            if (!response.isTruncated()) {
+            if (Boolean.FALSE.equals(response.isTruncated())) {
                 done = true;
             } else {
                 newMarker = response.marker();

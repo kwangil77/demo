@@ -20,7 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
 @SpringBootTest
-public class IamControllerIntegrationTest {
+class IamControllerIntegrationTest {
     @Autowired private MockMvc mockMvc;
     @MockBean private IamService iamService;
 

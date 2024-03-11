@@ -23,12 +23,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @ActiveProfiles("test")
 @WebMvcTest(IamController.class)
-public class IamControllerTest {
+class IamControllerTest {
     @Autowired private MockMvc mockMvc;
     @MockBean private IamService iamService;
 
     @Test
-    public void testListIamKeys() throws Exception {
+    void testListIamKeys() throws Exception {
         final String expectId = "AIDACKCEVSQ6C2EXAMPLE";
         final String expectAccessKeyId = "AKIAIOSFODNN7EXAMPLE";
         final long elapsedHoursOfAccessKey = 1L;

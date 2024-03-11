@@ -75,11 +75,11 @@ class IamServiceTest {
         List<IamUser> iamUsers = iamService.listIamUsers(elapsedHoursOfAccessKey);
 
         assertFalse(CollectionUtils.isEmpty(iamUsers));
-        assertEquals(iamUsers.size(), 1);
+        assertEquals(1, iamUsers.size());
         assertEquals(iamUsers.get(0).getId(), expectId);
 
         assertFalse(CollectionUtils.isEmpty(iamUsers.get(0).getAccessKeyIds()));
-        assertEquals(iamUsers.get(0).getAccessKeyIds().size(), 1);
+        assertEquals(1, iamUsers.get(0).getAccessKeyIds().size());
         assertEquals(iamUsers.get(0).getAccessKeyIds().get(0), expectAccessKeyId);
 
         iamUsers = iamService.listIamUsers(elapsedHoursOfAccessKey + 1L);
